@@ -1,0 +1,75 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+}
+#background {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    -webkit-filter: brightness(90%) saturate(140%) contrast(105%);
+    opacity: 0;
+    transition: opacity .2s ease-in;
+    background-clip: content-box;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    height: 40px;
+    width: 40px;
+    background-image: url('mapillary.png');
+    background-size: 100%;
+    opacity: 0.6;
+    border-radius: 4px;
+    transition: opacity .2s ease-in-out;
+}
+.logo:hover,
+.logo:active {
+    opacity: 0.9;
+}
+
+#location {
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    font-size: 12px;
+}
+
+#user {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+a:hover,
+a:active {
+    color: #35af6d;
+}
+
+#map {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    height: 160px;
+    width: 160px;
+    border-radius: 4px;
+    opacity: 0.6;
+    transition: opacity .2s ease-in-out;
+    cursor: pointer;
+}
+#map:hover,
+#map:active {
+    opacity: 0.8;
+}
