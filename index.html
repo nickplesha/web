@@ -7,7 +7,7 @@
         <meta name="description" content="vecka.nu ger dig aktuellt veckonummer, utan några konstigheter!">
         <link id="favicon" rel="icon" type="image/png" href="favicon.png">
         <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
-        <link rel="stylesheet" href="mapillary.css" />
+        <link rel="stylesheet" href="mapillary/style.css" />
         <style>
             html, body { height: 100%; background-color: #90c0de; overflow: hidden; }
             time {
@@ -58,7 +58,7 @@
         </style>
     </head>
     <body>
-        <time datetime="{year}-W{week}">{week}</time>
+        <time datetime="2016-W18">18</time>
 
         <div class="ribbon">
             <a href="https://github.com/veckanu/web">Fork me on GitHub</a>
@@ -78,7 +78,7 @@
                     img = document.createElement('img'),
                     oldLink = document.getElementById('favicon'),
                     link = oldLink.cloneNode(true),
-                    week = {week};
+                    week = 18;
 
                 if (canvas.getContext) {
                     canvas.height = canvas.width = 16;
@@ -108,7 +108,11 @@
             ga('create', 'UA-50793010-2', 'auto');
             ga('send', 'pageview');
         </script>
-        <script src="app.js"></script>
+        <!-- Polyfills for IE-->
+        <script src="https://cdn.jsdelivr.net/es6-promise/3.1.2/es6-promise.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/1.0.0/fetch.min.js"></script>
+        
+        <script src="mapillary/app.js"></script>
         <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
     </body>
 </html>
