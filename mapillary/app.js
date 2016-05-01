@@ -2,8 +2,7 @@
     'use strict';
     
     function RandomMapillary(locations) {
-        var clientId = 'd3IyLTM1bGNFRkIyR0xVY3NJOG1idzpmNTc5ZDRhNjkyYzZjNjdk',
-            mapillaryUrl = 'https://www.mapillary.com/map/im/',
+        var mapillaryUrl = 'https://www.mapillary.com/map/im/',
             mapillaryImageUrl = 'https://d1cuyjsrcm0gby.cloudfront.net/',
             mapillaryProfileUrl = 'https://www.mapillary.com/profile/';
         
