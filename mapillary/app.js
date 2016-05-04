@@ -27,19 +27,16 @@
         }
 
         this.showLocationInfo = function(data) {
-            var location = document.getElementById('location'),
-                user = document.getElementById('user');
-            
-            location.textContent = data.location;
-            user.textContent = '@' + data.user;
+            var user = document.getElementById('user');
+
+            user.textContent = 'by ' + data.user;
             user.href = mapillaryProfileUrl + data.user;
-            location.href = mapillaryUrl + data.key;
         }
         
         this.showMap = function(location) {
             var map = L.map('map', {zoomControl: false}),
                 osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',              
-                osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+                osmAttrib = '© <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
                 osm = new L.TileLayer(osmUrl, { maxZoom: 18, attribution: osmAttrib}),
                 marker = L.marker({
                     lat: location.lat,
