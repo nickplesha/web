@@ -15,15 +15,15 @@
                 backgroundImage = new Image(),
                 imageUrl = mapillaryImageUrl + location.key + '/thumb-2048.jpg',
                 background = document.getElementById('background');                
-                
-                backgroundImage.src = imageUrl;                
-                
+
                 backgroundImage.onload = function() {
-                    background.style.backgroundImage = "url('" + imageUrl + "')";
+                    background.style.backgroundImage = "url('" + backgroundImage.src + "')";
                     background.style.opacity = "1";
                     self.showLocationInfo(location);
                     self.showMap(location);
                 };
+                
+                backgroundImage.src = imageUrl;        
         }
 
         this.showLocationInfo = function(data) {
@@ -51,7 +51,7 @@
         }
                
         var location = this.getRandomLocation();
-                
+
         this.setBackgroundImage(location);
     }
 
